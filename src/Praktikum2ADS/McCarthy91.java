@@ -14,7 +14,6 @@ public class McCarthy91 {
     }
  
     public int mcCarthy(int n) {
-    	 
         if (n > 100) {
             return (n - 10);
         }
