@@ -7,16 +7,11 @@ public class McCarthy91 {
 	}
 	
     public int doMcCarthy91(int value) {
-    	   if (value > 100) {
-               return (value - 10);
+    	 if (value > 100) {
+    	   //M(n) n > 100 	>>>> -10
+           return (value - 10);
            }
-           return mcCarthy(mcCarthy(value + 11));
-    }
- 
-    public int mcCarthy(int n) {
-        if (n > 100) {
-            return (n - 10);
-        }
-        return mcCarthy(mcCarthy(n + 11));
+    	 //M(n) n <= 100 	>>>> (M(M(n+11))
+         return doMcCarthy91(doMcCarthy91(value + 11));
     }
 }
